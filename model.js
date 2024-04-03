@@ -1,0 +1,108 @@
+const mongoose = require('mongoose')
+
+const moviesSchema = new mongoose.Schema({
+    plot:{
+        type:String
+    },
+    genres:{
+        type:Array
+    },
+    cast:{
+        type:Array
+    },
+    poster:{
+        type:String
+    },
+    title:{
+        type:String
+    },
+    fullplot:{
+        type:String
+    },
+    languages:{
+        type:Array
+    },
+    released:{
+        type:String
+    },
+    directors:{
+        type:Array
+    },
+    rated:{
+        type:String
+    },
+    awards:{
+        wins:{
+            type:Number
+        },
+        nominations:{
+            type:Number
+        },
+        text:{
+            type:String
+        }
+    },
+    lastupdated:{
+        type:String
+    },
+    year:{
+        type:Number
+    },
+    imdb:{
+        rating:{
+            type:Number
+        },
+        votes:{
+            type:Number
+        },
+        id:{
+            type:Number
+        }
+    },
+    countries:{
+        type:Array
+    },
+    type:{
+        type:String
+    },
+    tomatoes:{
+        viewer:{
+            rating:{
+                type:Number
+            },
+            numReviews:{
+                type:Number
+            },
+            meter:{
+                type:Number
+            }
+            },
+            fresh:{
+                type:Number
+            },
+        critic:{
+                rating:{
+                type:Number
+            },
+            numReviews:{
+                type:Number
+            },
+            meter:{
+                type:Number
+            }
+            },
+            rotten:{
+                type:Number
+            },
+            lastupdated:{
+                type:Date
+            }
+    }
+    
+})
+
+const movies = mongoose.model('movies',moviesSchema)
+
+module.exports =  {
+    movies
+}
